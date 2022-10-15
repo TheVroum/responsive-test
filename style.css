@@ -1,0 +1,584 @@
+
+
+html
+{
+    background-color: aliceblue;
+}
+
+
+
+
+
+#one
+{
+    order: 2;
+    transform: skew(0deg, 20deg);
+    border: 1px red solid;
+    outline: 1px rebeccapurple solid;
+    width: 100px;
+}
+
+#two
+{
+    order: 0;
+}
+
+#olle
+{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+
+#scaled3d
+{
+    transform: perspective(500px) scale3d(2, 0.7, 0.2) translateZ(500px);
+    transform-origin: left;
+}
+
+
+#scaled3d
+{
+    transition: all 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: block;
+    z-index: 2;
+}
+
+
+#scaled3d:hover
+{
+    background-color: pink;
+    transform: translateY(50px) skew(35deg);
+}
+
+
+#centreur
+{
+    justify-content: center;
+    display: flex;
+    orientation: row;
+}
+
+
+
+#çava
+{
+    display: inline-block;
+}
+
+#çava:hover
+{
+    animation: statestest linear 10s infinite;
+    transform-origin: left;
+}
+
+
+@keyframes statestest
+{
+    0.0%
+    {
+
+    }
+
+    25%
+    {
+        background-color: red;
+    }
+
+    50.0%
+    {
+        transform: /*perspective(1400px)*/ rotateY(210deg)/* translateX(100px)*/;
+        background-color: bisque;
+    }
+
+    95.0%
+    {
+        background-color: yellowgreen;
+    }
+
+    100%
+    {
+
+    }
+}
+
+#retourné
+{
+    transform: translateY(50px) skew(10deg);
+}
+
+.tourné
+{
+    color: sienna;
+    transform: rotateX(30deg);
+}
+
+
+
+/*
+body
+{
+    Pour ajouter un interligne et interblock en général, voir comment faire.
+}
+*/
+
+
+
+#spacer
+{
+    height: 100px;
+}
+
+
+
+#maip
+{
+    color: white;
+    background-color: green;
+    animation: brakeur cubic-bezier(.27,.39,.81,1.16) 3s;
+}
+
+
+@keyframes monteur {
+    100%
+    {
+
+    }
+
+}
+
+@keyframes brakeur
+{
+    0.0%
+    {
+        transform: translateX(-100%);
+    }
+    95.0%
+    {
+        transform: skew(0);
+    }
+    99%
+    {
+        transform: skew(-10deg);
+        background-color: black;
+    }
+    99.1%
+    {
+        /*background-color: wheat;*/
+    }
+    100%
+    {
+        background-color: green;
+    }
+}
+
+
+#remplacé
+{
+    background: conic-gradient(
+        hsl(360, 100%, 50%),
+        hsl(315, 100%, 50%),
+        hsl(270, 100%, 50%),
+        hsl(225, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(135, 100%, 50%),
+        hsl(90, 100%, 50%),
+        hsl(45, 100%, 50%),
+        hsl(0, 100%, 50%));
+}
+
+#remplacé
+{
+    visibility: hidden;
+}
+#remplacé::before
+{
+    content:
+    "Contenu de la propriété content."
+    "Contenu de la propriété content."
+    "Contenu de la propriété content."
+    "Contenu de la propriété content."
+    "Contenu de la propriété content."
+    "Contenu de la propriété content.";
+    visibility: visible;
+    /*background: conic-gradient(
+    hsl(360, 100%, 50%),
+    hsl(315, 100%, 50%),
+    hsl(270, 100%, 50%),
+    hsl(225, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(135, 100%, 50%),
+    hsl(90, 100%, 50%),
+    hsl(45, 100%, 50%),
+    hsl(0, 100%, 50%)
+);
+*/
+}
+
+#inline-conic-gradient-test-div span:nth-child(1)
+{
+    /*background-color: bisque; Test du sélecteur : fonctionne.*/
+    background: conic-gradient(
+    hsl(360, 100%, 50%),
+    hsl(315, 100%, 50%),
+    hsl(270, 100%, 50%),
+    hsl(225, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(135, 100%, 50%),
+    hsl(90, 100%, 50%),
+    hsl(45, 100%, 50%),
+    hsl(0, 100%, 50%)
+);
+}
+
+
+
+#plan-et-plan-de-netteté
+{
+    /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+
+    justify-content: right;
+}
+
+
+
+#plan-et-plan-de-netteté > span:nth-child(1)
+{/*
+    border: solid #303065BB 2.5px;
+    border-radius: 10px;
+    text-align: center;
+    /*display: table-cell;*//*
+    vertical-align: middle;*/
+
+    max-width: 200px;
+    height: 40px;
+    margin: 30px;
+}
+
+
+
+/*
+#plan-et-plan-de-netteté > div:nth-child(1)
+{
+    
+}
+
+#plan-et-plan-de-netteté > div:nth-child(1)
+{
+    
+}
+
+#plan-et-plan-de-netteté > span
+{
+    
+}
+*/
+
+
+
+#test
+{
+    width: 100px;
+    flex-basis: 100px;
+}
+
+
+
+
+#second-test
+{
+    text-align: center;
+}
+
+
+
+#second-test > div
+{
+    height: calc(10px);
+    filter: opacity(0.6);
+}
+
+
+
+
+#second-test span
+{
+    /*display: block;*/
+    /*width: fit-content;*/
+    background-color: darkorange;
+}
+
+
+#third-test
+{
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+
+#third-test span
+{
+    background-color: olive;
+}
+
+
+.small-heighter
+{
+    height: 10px;
+}
+
+.medium-heighter
+{
+    height: 40px;
+}
+
+
+
+
+#fourth-test
+{
+    text-align: center;
+    border-collapse: separate;
+}
+
+
+
+#fourth-test > span
+{
+    border: 20px rgb(0, 0, 100) solid;
+    border-radius: 8px;
+    background-color: rgb(255, 253, 245);
+}
+
+
+
+
+
+#fifth-test
+{
+    text-align: center;
+}
+
+
+
+#fifth-test span
+{
+    border: 3.5px rgb(0, 0, 100) solid;
+    border-radius: 8px;
+    background-color: rgb(255, 253, 245);
+}
+
+#fifth-test > div
+{
+    margin: 50px;
+}
+
+
+
+
+#sixth-test
+{
+    text-align: center;
+    /*transform: translateX(50%);*/
+}
+
+
+
+#sixth-test > div
+{
+    background-color: darksalmon;
+    /*width: min-content;*/
+    width: 100px;
+    position: relative;
+    /*left: -50px;*//* - 50px*/
+    left: calc(50%);
+    transform: translateX(-50%);
+    /*transform: translateX(100%);*/
+}
+
+
+
+
+#seventh-test
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#seventh-test > div
+{
+    background-color: forestgreen;
+    margin: 10px;
+    border: 3px solid;
+}
+
+
+#eighth-test
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root
+{
+    --test-var: 250px;
+}
+
+#eighth-test > div
+{
+    background-color: chartreuse;
+    margin: 10px;
+    border: 3px solid;
+    border-radius: 6px;
+    min-height: 50px;
+    line-height: 50px;
+    min-width: var(--test-var);/*100px;*/
+    text-align: center;
+}
+
+
+
+
+
+
+#ninth-test
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#ninth-test > div
+{
+    background-color:ivory;
+    margin: -10px;
+    border: 3px solid;
+    border-radius: 8px;
+    min-height: 50px;
+    line-height: 50px;
+    min-width: 200px;
+    text-align: center;
+}
+
+
+#repr-1
+{
+    visibility: hidden;
+}
+
+
+
+#conic-gradient-test
+{
+    background: repeating-conic-gradient(
+        from 3deg at 25% 25%,
+        hsl(200, 100%, 50%) 0deg 15deg,
+        hsl(200, 100%, 60%) 10deg 30deg
+);
+    min-height: 75px;
+    font-weight: 900;
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.2);
+    background-clip: text;
+}
+
+
+
+
+
+#traceur
+{
+    height: 600px;
+    width: 600px;
+    background-color: aquamarine;
+}
+
+
+
+
+#dropParent
+{
+    background-image: url("béton.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    width: 100%;/*1526px ;/*4032;*/
+    height: 700px;/*2929;*/
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+
+#drop
+{
+    position: relative;
+    /*visibility: hidden;*/
+    /*filter: blue;*/
+    left: 30%;
+    top: 30%;
+    height: 25px;
+    /*width: 350px;*/
+    transition-timing-function: cubic-bezier(.34,.2,.44,.15);
+    /*cubic-bezier(.37,.15,.5,.05);/*cubic-bezier(0,-0.01,.61,-0.1);*/
+}
+
+
+
+
+#drop.fallingTestDrop
+{
+    top: 100%;
+    transform: scaleY(85%);
+    transition-property: top;
+    transition-duration: 0.5s;
+}
+
+
+/*#doucheFauxCurseur
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
+    height: 50px;
+    visibility: hidden;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
