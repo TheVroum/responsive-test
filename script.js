@@ -2,7 +2,7 @@
 function auClic(event)
 {
   document.querySelector("body").style
-  .cursor = "url(shower_cursor.svg), auto";//"none";url(shower.svg)
+  .cursor = "url(shower_cursor.svg) 22 20, auto";//"none";url(shower.svg)
   //document.querySelector("body").
   //alert("au clic");
   setTimeout(rétablirCurseur, 200);
@@ -27,6 +27,7 @@ function rétablirCurseur()
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 
 
 async function fuunc()
@@ -243,38 +244,47 @@ function traceur(event)
 
 
 
-function spawnTestDrop()
+function spawnTestDrop(event)
 {
-  document.querySelector("#drop").classList
-  .add("fallingTestDrop");
-  setTimeout(cleanSpawnTestDrop, 500);
-  /*setTimeout(cleanSpawnTestDrop2, 1000);*/
+  rect = event.target.getBoundingClientRect();
+  x = event.clientX - rect.left;
+  y = event.clientY - rect.top;
+
+  drop = document.querySelector("#drop");
+  drop.style.top = Math.min(y, 2250) + "px";//enlever le 2 devant 250 pour rétablir la hauteur minimum
+  drop.style.left = x + "px";
+  setTimeout(splitter, 50, event);
 }
+
+
+
+
+function splitter(event)
+{
+  rect = event.target.getBoundingClientRect();
+  x = event.clientX - rect.left;
+  y = event.clientY - rect.top;
+
+  drop = document.querySelector("#drop");
+  drop.classList.add("fallingTestDrop");
+  //alert("ici" + x + " " + y);
+  drop.style.top = "calc(100% + 1px)";
+
+  //alert("couille");
+  setTimeout(cleanSpawnTestDrop, 500);
+}
+
 
 
 
 
 function cleanSpawnTestDrop()
 {
-  /*document.querySelector("#drop").style
-    .transitionProperty = "width";/*"none";*/
-  document.querySelector("#drop").classList
-    .remove("fallingTestDrop");
-  //sleep(1000);
+    drop = document.querySelector("#drop");
+    drop.classList.remove("fallingTestDrop");
 }
 
 
-
-
-
-
-
-/*
-function cleanSpawnTestDrop2()
-{
-  document.querySelector("#drop").style
-    .transitionProperty = "top";
-}*/
 
 
 
