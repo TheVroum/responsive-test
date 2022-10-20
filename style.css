@@ -560,8 +560,28 @@ body
 
 
 
+#multitransform
+{
+    rotate: z 0.2turn;
+}
 
 
+.mtransformClass
+{
+    background-color: red;
+    /*display: inline-block;*/
+    width: fit-content;
+    height: fit-content;
+    transform: skew(20deg);
+    translate: 300px 10px;
+}
+
+
+
+.inlined
+{
+    display: inline;
+}
 
 
 

@@ -2,7 +2,7 @@
 function auClic(event)
 {
   document.querySelector("body").style
-  .cursor = "url(shower_cursor.svg) 22 20, auto";//"none";url(shower.svg)
+  .cursor = "url(shower_cursor.svg) 22.5 20, auto";//"none";url(shower.svg)
   //document.querySelector("body").
   //alert("au clic");
   setTimeout(rétablirCurseur, 200);
@@ -197,17 +197,18 @@ function ponderateurPositionnelTemporel(
   if(cyclesNumber < 0.5)//commence par la première demie période négative
   {
     //amorti, ne propage pas en espace
+    eloignementTemporel = abs(0.25 - cyclesNumber_t);
   }
   else if(cyclesNumber < 1)
-  {
+  {return 0;
     //élevé, propage comme un classique non amorti par le temps 
   }
   else if(cyclesNumber < 2)
-  {
+  {return 0;
 
   }
   else if(cyclesNumber < cyclesEndNumber)
-  {
+  {return 0;
     //ponderateur_t = 
   }
 
